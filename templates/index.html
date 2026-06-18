@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex Rivera — Network Engineer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">AR<span class="dot">.</span></span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certs">Certs</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">network@alex:~$</span>
+      </div>
+      <div class="terminal-body">
+        <p class="terminal-line"><span class="prompt">$</span> <span class="cmd" id="typed-cmd"></span><span class="cursor">|</span></p>
+        <p class="terminal-output" id="terminal-output" style="display:none;">
+          <span class="key">Name:</span>     Alex Rivera<br>
+          <span class="key">Role:</span>     Senior Network Engineer<br>
+          <span class="key">Focus:</span>    Enterprise WAN · Cloud Networking · Security<br>
+          <span class="key">Status:</span>   <span class="green-text">● Open to opportunities</span>
+        </p>
+      </div>
+    </div>
+    <div class="hero-text">
+      <h1>Building networks<br>that <span class="accent">never go down.</span></h1>
+      <p class="hero-sub">8+ years designing, securing, and automating enterprise-grade infrastructure for organizations that cannot afford downtime.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">Network-first thinking,<br>from the data center out.</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I specialize in designing and managing large-scale network infrastructure — from multi-site WAN architectures and SD-WAN deployments to zero-trust security models and cloud-hybrid environments.</p>
+          <p>My approach is simple: build for reliability first, automate everything repeatable, and document obsessively so the team behind me can own it too.</p>
+          <p>When I'm not troubleshooting BGP or writing Ansible playbooks, I'm mentoring junior engineers and contributing to networking communities.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Years Experience</span></div>
+          <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Sites Managed</span></div>
+          <div class="stat"><span class="stat-num">99.98%</span><span class="stat-label">Uptime Achieved</span></div>
+          <div class="stat"><span class="stat-num">5</span><span class="stat-label">Certifications</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <p class="eyebrow">Skills</p>
+      <h2 class="section-title">The stack I work in.</h2>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3>Routing & Switching</h3>
+          <div class="skill-tags">
+            <span class="tag">BGP</span><span class="tag">OSPF</span><span class="tag">EIGRP</span>
+            <span class="tag">MPLS</span><span class="tag">VLANs</span><span class="tag">STP</span>
+            <span class="tag">QoS</span><span class="tag">VXLAN</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Vendors & Platforms</h3>
+          <div class="skill-tags">
+            <span class="tag">Cisco IOS/NX-OS</span><span class="tag">Juniper Junos</span>
+            <span class="tag">Palo Alto</span><span class="tag">Fortinet</span>
+            <span class="tag">Aruba</span><span class="tag">F5 BIG-IP</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Cloud & SD-WAN</h3>
+          <div class="skill-tags">
+            <span class="tag">AWS VPC</span><span class="tag">Azure vNet</span>
+            <span class="tag">Cisco Viptela</span><span class="tag">VMware VeloCloud</span>
+            <span class="tag">Direct Connect</span><span class="tag">ExpressRoute</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Automation & Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Ansible</span><span class="tag">Python</span>
+            <span class="tag">Terraform</span><span class="tag">Netmiko</span>
+            <span class="tag">Wireshark</span><span class="tag">PRTG</span>
+            <span class="tag">SolarWinds</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="eyebrow">Projects</p>
+      <h2 class="section-title">Work that shipped.</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-tag">WAN Design</div>
+          <h3>50-Site Enterprise WAN Overhaul</h3>
+          <p>Migrated a legacy MPLS network to a hybrid SD-WAN/MPLS architecture across 50 branch offices, reducing circuit costs by 40% while improving failover from 4 minutes to under 30 seconds.</p>
+          <div class="project-tech"><span>Cisco Viptela</span><span>BGP</span><span>MPLS</span></div>
+        </div>
+        <div class="project-card">
+          <div class="project-tag">Security</div>
+          <h3>Zero-Trust Network Segmentation</h3>
+          <p>Designed and implemented a zero-trust architecture for a financial services firm, deploying micro-segmentation across 3 data centers and reducing lateral movement risk.</p>
+          <div class="project-tech"><span>Palo Alto</span><span>Prisma</span><span>VXLAN</span></div>
+        </div>
+        <div class="project-card">
+          <div class="project-tag">Automation</div>
+          <h3>Network Config Automation Pipeline</h3>
+          <p>Built an Ansible-based automation framework that reduced configuration deployment time from hours to minutes across 200+ devices, with built-in compliance checks and rollback.</p>
+          <div class="project-tech"><span>Ansible</span><span>Python</span><span>Git</span></div>
+        </div>
+        <div class="project-card">
+          <div class="project-tag">Cloud</div>
+          <h3>Hybrid Cloud Connectivity</h3>
+          <p>Architected AWS Direct Connect and Azure ExpressRoute connectivity for a multi-cloud environment, enabling seamless workload migration and sub-5ms latency.</p>
+          <div class="project-tech"><span>AWS</span><span>Azure</span><span>BGP</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section section-dark" id="certs">
+    <div class="container">
+      <p class="eyebrow">Certifications</p>
+      <h2 class="section-title">Verified credentials.</h2>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon">🏅</div>
+          <div class="cert-info"><h3>CCNP Enterprise</h3><p>Cisco Certified Network Professional</p></div>
+          <span class="cert-year">2023</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🏅</div>
+          <div class="cert-info"><h3>CCNA</h3><p>Cisco Certified Network Associate</p></div>
+          <span class="cert-year">2019</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🏅</div>
+          <div class="cert-info"><h3>AWS Solutions Architect</h3><p>Amazon Web Services — Associate</p></div>
+          <span class="cert-year">2022</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🏅</div>
+          <div class="cert-info"><h3>PCNSE</h3><p>Palo Alto Networks Security Engineer</p></div>
+          <span class="cert-year">2021</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🏅</div>
+          <div class="cert-info"><h3>CompTIA Network+</h3><p>CompTIA Network Infrastructure</p></div>
+          <span class="cert-year">2018</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact-container">
+      <p class="eyebrow">Contact</p>
+      <h2 class="section-title">Let's build something reliable.</h2>
+      <p class="contact-sub">Open to senior engineering roles, consulting, and architecture reviews. Reach out and I'll respond within 24 hours.</p>
+      <div class="contact-links">
+        <a href="mailto:alex@example.com" class="contact-link">
+          <span class="contact-icon">✉</span> alex@example.com
+        </a>
+        <a href="https://linkedin.com/in/alexrivera" target="_blank" class="contact-link">
+          <span class="contact-icon">in</span> linkedin.com/in/alexrivera
+        </a>
+        <a href="https://github.com/alexrivera" target="_blank" class="contact-link">
+          <span class="contact-icon">⌥</span> github.com/alexrivera
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Built with Flask · Deployed on Render · <span class="accent">Alex Rivera</span> © 2026</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
